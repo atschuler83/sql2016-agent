@@ -1,0 +1,7 @@
+# CODEOWNERS — set GitHub handles or teams for required review
+# Replace @org/team or @user with actual owners when available.
+
+*                 @org/sql-2016-owners
+templates/*       @org/sql-2016-owners
+docs/*            @org/sql-2016-owners
+.github/*         @org/sql-2016-owners
