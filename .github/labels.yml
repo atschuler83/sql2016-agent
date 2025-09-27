@@ -1,0 +1,27 @@
+- name: "ci"
+  color: "#0e8a16"
+  description: "Automation, workflows, CI"
+
+- name: "dependencies"
+  color: "#0366d6"
+  description: "Dependency updates (Dependabot)"
+
+- name: "sql"
+  color: "#5319e7"
+  description: "SQL modules and scripts"
+
+- name: "docs"
+  color: "#cfd3d7"
+  description: "Documentation and READMEs"
+
+- name: "templates"
+  color: "#1d76db"
+  description: "Module and UDF templates"
+
+- name: "intake"
+  color: "#f9d0c4"
+  description: "Intake, proposed, and reports"
+
+- name: "tests"
+  color: "#d93f0b"
+  description: "Test files and harness"
