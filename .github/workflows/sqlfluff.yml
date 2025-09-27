@@ -1,0 +1,38 @@
+name: SQL Lint (SQLFluff T-SQL)
+
+on:
+  pull_request:
+    paths:
+      - "**/*.sql"
+  push:
+    branches: [ "main" ]
+    paths:
+      - "**/*.sql"
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install SQLFluff
+        run: |
+          pip install --upgrade pip
+          pip install sqlfluff
+
+      - name: Lint SQL with SQLFluff (tsql dialect)
+        run: |
+          sqlfluff version
+          # Lint all .sql files; fail the job on violations
+          sqlfluff lint --dialect tsql .
+
+      - name: Show fix hints (does not modify files)
+        if: failure()
+        run: |
+          echo "Tip: Run 'sqlfluff fix --dialect tsql .' locally to auto-fix many issues."
