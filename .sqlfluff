@@ -1,0 +1,17 @@
+[sqlfluff]
+dialect = tsql
+# Keep config minimal at first to avoid noise; we can tighten later.
+# Treat all .sql files in repo:
+exclude_rules =
+    # (Intentionally empty at start)
+
+[rules]
+# Example sane defaults (adjust later as preferences emerge)
+max_line_length = 140
+
+[rule_L010]  # capitalization of keywords
+capitalisation_policy = upper
+
+[rule_L003]  # indentation
+indent_unit = spaces
+tab_space_size = 4
