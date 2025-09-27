@@ -1,0 +1,28 @@
+# PR Labeler config — maps label names to file path globs.
+# Labels must already exist in the repo (see optional sync below).
+# Docs: https://github.com/actions/labeler
+# Marketplace: https://github.com/marketplace/actions/labeler
+
+"ci":
+  changed-files:
+    - any-glob-to-any-file: [".github/**", "tools/**"]
+
+"sql":
+  changed-files:
+    - any-glob-to-any-file: ["**/*.sql", "modules/**"]
+
+"docs":
+  changed-files:
+    - any-glob-to-any-file: ["README.md", "docs/**"]
+
+"templates":
+  changed-files:
+    - any-glob-to-any-file: ["templates/**"]
+
+"intake":
+  changed-files:
+    - any-glob-to-any-file: ["intake/**", "proposed/**", "reports/**"]
+
+"tests":
+  changed-files:
+    - any-glob-to-any-file: ["tests/**"]
