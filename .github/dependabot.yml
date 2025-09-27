@@ -1,0 +1,18 @@
+version: 2
+
+updates:
+  # Keep GitHub Actions up to date in this repo
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"       # options: daily, weekly, monthly
+      day: "monday"
+      time: "09:00"
+      timezone: "America/Los_Angeles"
+    open-pull-requests-limit: 5
+    labels:
+      - dependencies
+      - ci
+    commit-message:
+      prefix: "chore"
+      include: "scope"
